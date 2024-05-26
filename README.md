@@ -86,7 +86,7 @@ gdisk /dev/nvme0n1
 
 ```bash
 mkfs.fat -F 32 -n EFI /dev/nvme0n1p1
-mkfs.xfs -L NIXOS /dev/nvme0n1p2
+mkfs.ext4 -L NIXOS /dev/nvme0n1p2
 ```
 
 - Mount Partitions:
@@ -106,17 +106,17 @@ nix-shell -p nixFlakes git
 - Clone my Dotfiles 
 
 ```bash 
-git clone --depth 1 https://github.com/linuxmobile/kaku /mnt/etc/nixos
+git clone --depth 1 https://github.com/eddiecho/kaku /mnt/etc/nixos
 ```
 
 - Generate your Own Nix Hardware Settings:
 ### ⚠ <sup><sub><samp>DON'T FORGET IT</samp></sub></sup>
 
 ```bash
-sudo nixos-generate-config --dir --force /mnt/etc/nixos/hosts/aesthetic
+nixos-generate-config --force --dir /mnt/etc/nixos/hosts/aesthetic --root /mnt
 
 # Remove configuration.nix 
-rm -rf /mnt/etc/nixos/hosts/aesthetic/configuration.nix
+rm /mnt/etc/nixos/hosts/aesthetic/configuration.nix
 ```
 
 - Install Dotfiles Using Flake
@@ -126,7 +126,7 @@ rm -rf /mnt/etc/nixos/hosts/aesthetic/configuration.nix
 cd mnt/etc/nixos/
 
 # Install
-nixos-install --flake .#aesthetic
+nixos-install --verbose --flake .#aesthetic
 ```
 
 - Reboot

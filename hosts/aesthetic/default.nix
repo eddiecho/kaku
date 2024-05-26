@@ -3,7 +3,7 @@ _: {
 
   boot = {
     # load modules on boot
-    kernelModules = ["amdgpu"];
+#    kernelModules = ["amdgpu"];
     kernelParams = [
       "amd_pstate=active"
       "ideapad_laptop.allow_v4_dytc=Y"
