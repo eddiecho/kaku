@@ -11,12 +11,8 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = "Braian A. Diez";
-    userEmail = "bdiez19@gmail.com";
-    signing = {
-      key = "FDA65033CDFE7C2A";
-      signByDefault = true;
-    };
+    userName = "Eddie Cho"
+    userEmail = "eunseocho@gmail.com"
 
     delta = {
       enable = true;
