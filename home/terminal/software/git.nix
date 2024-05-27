@@ -11,8 +11,8 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = "Eddie Cho"
-    userEmail = "eunseocho@gmail.com"
+    userName = "Eddie Cho";
+    userEmail = "eunseocho@gmail.com";
 
     delta = {
       enable = true;
