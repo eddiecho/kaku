@@ -18,7 +18,6 @@
     ps_mem
 
     vesktop
-    inputs.self.packages.${pkgs.system}.discordo
 
     # misc
     pciutils

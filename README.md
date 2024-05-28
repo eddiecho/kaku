@@ -129,15 +129,21 @@ cd mnt/etc/nixos/
 nixos-install --verbose --flake .#aesthetic
 ```
 
+- Troubleshooting
+* .drv files go to /tmp if you get out of disk space
+* If OOM, use `--cores 1 -j 1` temporarily for that package
+
+```bash
+nixos-enter
+passwd YourUser
+```
+
 - Reboot
 
 ### 🐙  <sup><sub><samp>Remember <strong>Default</strong> User & password are: nixos</samp></sub></sup>
 
 - Change Default password for User.
 
-```bash
-passwd YourUser
-```
 
 - Install w/ Home-Manager the config
 
