@@ -1,0 +1,3 @@
+[submodule "aylur"]
+	path = aylur
+	url = https://github.com/Aylur/dotfiles
